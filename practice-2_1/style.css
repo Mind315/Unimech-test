@@ -1,0 +1,250 @@
+/* common */
+.body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100vw;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.btn-open {
+  padding: 14px;
+  border: none;
+  outline: none;
+  background-color: #e5266e;
+  border-radius: 4px;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-open:hover {
+  box-shadow: 2px 4px 7px -2px #000000;
+}
+.btn-open:active {
+  transform: translateY(2px);
+}
+.bg-lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.42);
+  display: none;
+}
+.bg-lock_active {
+  display: block;
+}
+
+/* form style */
+.form-container {
+  position: relative;
+  padding: 0 50px;
+  max-width: 854px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  transition: transform 0.5s;
+}
+.form-container.form-container_show {
+  transform: translateX(-50%) translateY(0%);
+}
+.form {
+  margin: 0 auto;
+  max-width: 754px;
+  padding: 7% 13%;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.form-wrapper {
+  display: flex;
+}
+.form__item {
+  margin-bottom: 32px;
+}
+.form__item_mt {
+  margin-top: 12px;
+}
+.form__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+}
+.form__organization-name,
+.form__phone,
+.form__mail,
+.form__logo,
+.form__category,
+.form__supervisor {
+  color: #6a6e72;
+  font-size: 12px;
+}
+.form__label {
+  position: relative;
+  top: 24px;
+  left: 30px;
+}
+.form__label.form__supervisor {
+  left: 16px;
+}
+.form__label:not(.form__supervisor)::before {
+  position: absolute;
+  content: '*';
+  top: -7px;
+  left: -13px;
+  font-size: 30px;
+  color: red;
+}
+
+.form__input {
+  width: 100%;
+  color: #0c1014;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 22px 0 8px 16px;
+  border: 1px solid #d6dade;
+  border-radius: 2px;
+  outline: none;
+}
+.form__item .form__input,
+.form__youtube .form__input {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.form__button,
+.form__button-cancel {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
+.form__button {
+  background: #e5266e;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 50px;
+}
+.form__button:hover {
+  opacity: 0.8;
+}
+.form__button:active {
+  background: #991749;
+}
+.form__button-cancel {
+  background-color: #fff;
+  color: #0848c0;
+  border-radius: 4px;
+}
+.form__button-cancel:hover {
+  background-color: #f5f5f5;
+}
+
+/* logo -style - block */
+.wrapper-logo {
+  max-width: 163px;
+  margin-left: 32px;
+}
+.form__logo::after {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 10px;
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  cursor: pointer;
+}
+.form__input-logo {
+  border: none;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.form__logo-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.personal-image {
+  text-align: center;
+  position: relative;
+}
+
+.personal-figure {
+  position: relative;
+  width: 163px;
+  height: 163px;
+  top: 30px;
+}
+.personal-figure::after {
+  content: 'Выберите файл';
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  width: 80px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.personal-avatar {
+  cursor: pointer;
+  width: 163px;
+  height: 163px;
+  border-radius: 100%;
+}
+
+.personal-figcaption {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.delete-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 35px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+}
+.delete-img:hover {
+  box-shadow: 0px 0px 0px 2px grey;
+}
+
+@media screen and (max-width: 680px) {
+  .form {
+    padding: 4% 8%;
+  }
+  .form__title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .form-wrapper {
+    flex-direction: column-reverse;
+  }
+  .wrapper-logo {
+    margin: 0 auto 20px auto;
+  }
+}

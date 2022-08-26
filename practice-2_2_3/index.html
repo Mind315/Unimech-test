@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice-2_2</title>
+    <style>
+      thead th:first-child,
+      tbody td:first-child {
+        text-align: left;
+        padding-left: 10px;
+      }
+
+      td,
+      th {
+        border: 1px solid #ff8630;
+        padding: 10px;
+        vertical-align: top;
+        line-height: 1.2;
+      }
+      #title,
+      #description,
+      #id {
+        cursor: pointer;
+      }
+      #title:hover,
+      #description:hover,
+      #id:hover {
+        background-color: gray;
+      }
+      #get-posts {
+        background-color: burlywood;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="get-posts">GET POSTS</button>
+    <input id="input" type="text" placeholder="enter" />
+    <span>начните вводить b e a t a e</span>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th id="id">ID</th>
+          <th id="title">Title</th>
+          <th id="description">Description</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="main.js"></script>
+  </body>
+</html>
