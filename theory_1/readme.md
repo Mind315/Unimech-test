@@ -7,7 +7,7 @@ for (var i = 0; i < arr.length; i++) {
   }, 3000);
 }
 
-//вынутри сеттаймауты i === 4.
+//вынутри сеттаймаута i === 4.
 
  // Bad: undefined 
  // Bad: undefined 
