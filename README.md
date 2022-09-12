@@ -15,7 +15,7 @@ https://mind315.github.io/Unimech-test/practice-2_1/
 
 2 и 3 задания. 
 рендер таблицы
-сортировка по id\title\description
+сортировка по при нажатии на id\title\description по кличеству символом
 поиск через input по 3 первым символам
 
 https://mind315.github.io/Unimech-test/practice-2_2_3/
